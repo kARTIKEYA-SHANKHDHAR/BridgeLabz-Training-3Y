@@ -1,0 +1,471 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 0;
+            margin: 0;
+        }
+
+
+
+        .navbar {
+            width: 100%;
+            min-height: 75px;
+            background: white;
+
+            display: flex;
+            align-items: center;
+
+            border-top: 3px solid #202832;
+            border-bottom: 1px solid #eeeeee;
+
+            padding: 0 30px;
+            margin: 0;
+
+            box-sizing: border-box;
+        }
+
+        .logo-section {
+            width: 145px;
+            height: 66px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-right: 1px solid #eeeeee;
+
+            flex-shrink: 0;
+        }
+
+        .logo-section img {
+            width: 125px;
+            max-width: 100%;
+            height: auto;
+
+            filter: brightness(0) saturate(100%)
+                    invert(12%) sepia(18%)
+                    saturate(1100%) hue-rotate(175deg)
+                    brightness(90%);
+        }
+
+        .location-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            width: 275px;
+            padding-left: 18px;
+
+            flex-shrink: 0;
+        }
+
+        .location-icon {
+            font-size: 28px;
+            color: #6947ed;
+        }
+
+        .city {
+            font-size: 18px;
+            font-weight: bold;
+            color: #222;
+        }
+
+        .state {
+            font-size: 14px;
+            color: #666;
+            margin-top: 3px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            flex: 1;
+            min-width: 0;
+            max-width: 850px;
+
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+
+            font-size: 16px;
+            font-weight: 600;
+            white-space: nowrap;
+
+            padding: 12px 10px;
+        }
+
+        .nav-links .active {
+            background: #eee9ff;
+            color: #34227d;
+
+            padding: 12px 22px;
+            border-radius: 25px;
+        }
+
+        .nav-icons {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+
+            margin-left: auto;
+            padding-left: 20px;
+
+            flex-shrink: 0;
+        }
+
+        .search {
+            font-size: 30px;
+            color: #6947ed;
+        }
+
+        .profile {
+            width: 52px;
+            height: 52px;
+
+            border-radius: 50%;
+            background: #d9dde3;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 24px;
+            color: white;
+        }
+
+
+        
+
+        .card-container {
+            padding: 40px;
+
+            display: grid;
+
+            gap: 20px;
+
+            grid-template-columns: repeat(3, minmax(0, 200px));
+
+            justify-content: center;
+        }
+
+        .movie-card {
+            width: 100%;
+            max-width: 200px;
+
+            border: 2px solid #00000014;
+            border-radius: 16px;
+
+            background-color: white;
+            overflow: hidden;
+
+            opacity: 0;
+
+            animation: CardAnimation 1s ease-in forwards;
+        }
+
+        .movie-image {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .movie-image img {
+            width: 100%;
+            height: auto;
+
+            display: block;
+        }
+
+        .movie-info {
+            padding: 12px;
+        }
+
+        .movie-info h5 {
+            font-weight: 600;
+            font-size: 16px;
+
+            margin-bottom: 5px;
+        }
+
+        .movie-rating {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .book-now {
+            margin-top: 12px;
+        }
+
+        .book-now button {
+            padding: 8px 14px;
+
+            border: none;
+            border-radius: 8px;
+
+            background-color: #000;
+            color: white;
+
+            cursor: pointer;
+        }
+
+
+      
+
+        .movie-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .movie-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .movie-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .movie-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .movie-card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .movie-card:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .movie-card:nth-child(7) {
+            animation-delay: 0.7s;
+        }
+
+        .movie-card:nth-child(8) {
+            animation-delay: 0.8s;
+        }
+
+        .movie-card:nth-child(9) {
+            animation-delay: 0.9s;
+        }
+
+        .movie-card:nth-child(10) {
+            animation-delay: 0.9s;
+        }
+
+        @keyframes CardAnimation {
+
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+
+        }
+
+
+     
+        @media (max-width: 1100px) {
+
+            .navbar {
+                padding: 0 20px;
+            }
+
+            .location-section {
+                width: 220px;
+            }
+
+            .nav-links {
+                gap: 5px;
+                margin-left: 10px;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+                padding: 10px 7px;
+            }
+
+            .nav-links .active {
+                padding: 10px 14px;
+            }
+
+        }
+
+
+        
+
+        @media (max-width: 900px) {
+
+            .card-container {
+                grid-template-columns: repeat(2, minmax(0, 200px));
+                padding: 30px 20px;
+            }
+
+            .location-section {
+                width: auto;
+                padding-left: 15px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-icons {
+                margin-left: auto;
+            }
+
+        }
+
+
+       
+
+        @media (max-width: 600px) {
+
+            .navbar {
+                min-height: 65px;
+                padding: 0 15px;
+            }
+
+            .logo-section {
+                width: 115px;
+                height: 60px;
+                border-right: none;
+            }
+
+            .logo-section img {
+                width: 105px;
+            }
+
+            .location-section {
+                display: none;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-icons {
+                gap: 15px;
+                padding-left: 0;
+            }
+
+            .search {
+                font-size: 26px;
+            }
+
+            .profile {
+                width: 44px;
+                height: 44px;
+                font-size: 21px;
+            }
+
+
+            .card-container {
+                width: 100%;
+
+                padding: 25px 15px;
+
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+
+                gap: 15px;
+            }
+
+            .movie-card {
+                width: 100%;
+                max-width: none;
+            }
+
+            .movie-info {
+                padding: 10px;
+            }
+
+            .movie-info h5 {
+                font-size: 14px;
+            }
+
+            .movie-rating {
+                font-size: 12px;
+            }
+
+            .book-now button {
+                width: 100%;
+                padding: 8px 5px;
+                font-size: 12px;
+            }
+
+        }
+
+
+      
+
+        @media (max-width: 400px) {
+
+            .navbar {
+                padding: 0 10px;
+            }
+
+            .logo-section {
+                width: 105px;
+            }
+
+            .logo-section img {
+                width: 95px;
+            }
+
+            .nav-icons {
+                gap: 10px;
+            }
+
+            .search {
+                font-size: 24px;
+            }
+
+            .profile {
+                width: 40px;
+                height: 40px;
+                font-size: 19px;
+            }
+
+
+            .card-container {
+                padding: 20px 10px;
+                gap: 12px;
+            }
+
+            .movie-info {
+                padding: 8px;
+            }
+
+            .movie-info h5 {
+                font-size: 13px;
+            }
+
+            .movie-rating {
+                font-size: 11px;
+            }
+
+            .book-now {
+                margin-top: 8px;
+            }
+
+            .book-now button {
+                padding: 7px 3px;
+                font-size: 11px;
+            }
+
+        }
+
+   
